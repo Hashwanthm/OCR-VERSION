@@ -1,1 +1,1 @@
-python -m pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host pypi.python.org flask pdfplumber openpyxl werkzeug
+python -m pip install Flask pdfplumber openpyxl werkzeug --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org
