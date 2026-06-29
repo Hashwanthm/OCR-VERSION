@@ -1,1 +1,4 @@
-python -m pip install Flask pdfplumber openpyxl werkzeug --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org
+python -m pip config set global.trusted-host "pypi.org pypi.python.org files.pythonhosted.org"
+python -m pip config set global.index-url https://pypi.org/simple
+python -m pip install Flask pdfplumber openpyxl werkzeug
+python -m pip install Flask pdfplumber openpyxl werkzeug --use-feature=truststore
