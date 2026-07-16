@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>E-commerce DOM Selectors</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-800">
+
+  <!-- Header -->
+  <header class="bg-slate-900 text-white">
+    <div
+      class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5"
+    >
+      <h1 id="store-title" class="text-2xl font-bold">
+        Hema Store
+      </h1>
+
+      <p id="cart-count" class="rounded-lg bg-blue-600 px-4 py-2">
+        Cart: 0
+      </p>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-6 py-8">
+
+    <!-- Search section -->
+    <section class="mb-8 rounded-xl bg-white p-6 shadow">
+      <label
+        for="search-input"
+        class="mb-2 block font-semibold"
+      >
+        Search products
+      </label>
+
+      <div class="flex gap-3">
+        <input
+          id="search-input"
+          name="productSearch"
+          type="text"
+          placeholder="Enter product name"
+          class="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none focus:border-blue-500"
+        >
+
+        <button
+          id="search-button"
+          type="button"
+          class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
+        >
+          Search
+        </button>
+      </div>
+
+      <p id="search-message" class="mt-3 text-sm text-slate-600">
+        Enter a product name to search.
+      </p>
+    </section>
+
+    <!-- Product heading -->
+    <div class="mb-5 flex items-center justify-between">
+      <h2 class="section-title text-2xl font-bold">
+        Available Products
+      </h2>
+
+      <button
+        id="highlight-button"
+        type="button"
+        class="rounded-lg bg-amber-500 px-4 py-2 font-semibold text-white hover:bg-amber-600"
+      >
+        Highlight prices
+      </button>
+    </div>
+
+    <!-- Products -->
+    <section
+      id="product-list"
+      class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+    >
+
+      <!-- Product 1 -->
+      <article
+        class="product-card rounded-xl bg-white p-5 shadow"
+        data-product-id="P101"
+      >
+        <span
+          class="product-category text-sm font-semibold text-blue-600"
+        >
+          Computers
+        </span>
+
+        <h3 class="product-name mt-2 text-xl font-bold">
+          Laptop
+        </h3>
+
+        <p class="product-description mt-2 text-slate-600">
+          Powerful laptop with 16 GB RAM.
+        </p>
+
+        <p class="product-price mt-4 text-lg font-bold">
+          ₹60,000
+        </p>
+
+        <p class="stock-message mt-1 text-sm text-green-600">
+          In stock
+        </p>
+
+        <button
+          type="button"
+          class="add-button mt-5 w-full rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700"
+        >
+          Add to cart
+        </button>
+      </article>
+
+      <!-- Product 2 -->
+      <article
+        class="product-card rounded-xl bg-white p-5 shadow"
+        data-product-id="P102"
+      >
+        <span
+          class="product-category text-sm font-semibold text-blue-600"
+        >
+          Mobiles
+        </span>
+
+        <h3 class="product-name mt-2 text-xl font-bold">
+          Smartphone
+        </h3>
+
+        <p class="product-description mt-2 text-slate-600">
+          Smartphone with a high-quality camera.
+        </p>
+
+        <p class="product-price mt-4 text-lg font-bold">
+          ₹25,000
+        </p>
+
+        <p class="stock-message mt-1 text-sm text-green-600">
+          In stock
+        </p>
+
+        <button
+          type="button"
+          class="add-button mt-5 w-full rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700"
+        >
+          Add to cart
+        </button>
+      </article>
+
+      <!-- Product 3 -->
+      <article
+        class="product-card rounded-xl bg-white p-5 shadow"
+        data-product-id="P103"
+      >
+        <span
+          class="product-category text-sm font-semibold text-blue-600"
+        >
+          Accessories
+        </span>
+
+        <h3 class="product-name mt-2 text-xl font-bold">
+          Wireless Keyboard
+        </h3>
+
+        <p class="product-description mt-2 text-slate-600">
+          Comfortable keyboard for office work.
+        </p>
+
+        <p class="product-price mt-4 text-lg font-bold">
+          ₹1,500
+        </p>
+
+        <p class="stock-message mt-1 text-sm text-red-600">
+          Out of stock
+        </p>
+
+        <button
+          type="button"
+          disabled
+          class="add-button mt-5 w-full cursor-not-allowed rounded-lg bg-slate-400 px-4 py-2 font-semibold text-white"
+        >
+          Unavailable
+        </button>
+      </article>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
